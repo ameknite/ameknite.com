@@ -62,7 +62,7 @@ const Container = () => {
     <div class="container">
       <h1>Ame アメ</h1>
       <p>
-        @ameknite ✦ 3D Character Artist
+        @ameknite ✦ Character Artist
       </p>
       <div class="icons">
         {socials_links.map((link) => (
@@ -79,8 +79,7 @@ const Container = () => {
             <i
               class={hoveredIcon() === link.name ? link.icon_beat : link.icon}
             >
-            </i>{" "}
-            {/* Font Awesome icon */}
+            </i>
           </a>
         ))}
       </div>

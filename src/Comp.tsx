@@ -1,40 +1,50 @@
 import { createSignal } from "solid-js";
+import {
+  siBluesky,
+  siInstagram,
+  siItchdotio,
+  siKofi,
+  siMastodon,
+  siThreads,
+  siX,
+  siYoutube,
+} from "simple-icons";
 import "./style.css";
 
 const socials_links = [
   {
     name: "X",
-    icon: "fa-brands  fa-x-twitter",
+    icon: siX,
     icon_beat: "fa-brands  fa-x-twitter fa-beat",
     url: "https://x.com/ameknite",
   },
   {
     name: "Bluesky",
-    icon: "fa-brands  fa-bluesky",
+    icon: siBluesky,
     icon_beat: "fa-brands  fa-bluesky fa-beat",
     url: "https://bsky.app/profile/ameknite.com",
   },
   {
     name: "Mastodon",
-    icon: "fa-brands fa-mastodon",
+    icon: siMastodon,
     icon_beat: "fa-brands  fa-mastodon fa-beat",
     url: "https://mastodon.gamedev.place/@ameknite",
   },
   {
     name: "Threads",
-    icon: "fa-brands fa-threads",
+    icon: siThreads,
     icon_beat: "fa-brands  fa-threads fa-beat",
     url: "https://www.threads.net/@ameknite",
   },
   {
     name: "Instagram",
-    icon: "fa-brands fa-instagram",
+    icon: siInstagram,
     icon_beat: "fa-brands  fa-instagram fa-beat",
     url: "https://instagram.com/ameknite",
   },
   {
     name: "YouTube",
-    icon: "fa-brands fa-youtube",
+    icon: siYoutube,
     icon_beat: "fa-brands fa-youtube fa-beat",
     url: "https://www.youtube.com/@ameknite",
   },
@@ -43,25 +53,23 @@ const socials_links = [
 const support_links = [
   {
     name: "Ko-fi",
-    icon: "fab fa-coffee",
+    icon: siKofi,
     icon_beat: "fa-brands  fa-ko-fi fa-beat",
     url: "https://ko-fi.com/ameknite",
   },
   {
     name: "Itch.io",
-    icon: "fa-brands fa-itch-io",
+    icon: siItchdotio,
     icon_beat: "fa-brands fa-itch-io fa-beat",
     url: "https://ameknite.itch.io/",
   },
 ];
 
 const Container = () => {
-  const [hoveredIcon, setHoveredIcon] = createSignal(null);
-
   return (
     <div class="container">
-      <h1>Ame アメ</h1>
-      <p>
+      <h1 class="title">Ame アメ</h1>
+      <p class="description">
         @ameknite ✦ Character Artist
       </p>
       <div class="icons">
@@ -73,16 +81,50 @@ const Container = () => {
             rel="noopener noreferrer"
             class="icon"
             aria-label={link.name}
-            onMouseEnter={() => setHoveredIcon(link.name)}
-            onMouseLeave={() => setHoveredIcon(null)}
           >
-            <i
-              class={hoveredIcon() === link.name ? link.icon_beat : link.icon}
+            <svg
+              class="icon"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              viewBox="0 0 24 24"
+              width="25"
+              height="25"
+              fill={`#${link.icon.hex}`}
             >
-            </i>
+              <title>{link.icon.title}</title>
+              <path d={link.icon.path}></path>
+            </svg>
           </a>
         ))}
       </div>
+      {
+        /* <h2 class="subtitle">3D Models</h2>
+      <div class="icons">
+        {support_links.map((link) => (
+          <a
+            href={link.url}
+            title={link.name}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="icon"
+            aria-label={link.name}
+          >
+            <svg
+              class="icon"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              viewBox="0 0 24 24"
+              width={link.name == "Ko-fi" ? "30" : "25"}
+              height={link.name == "Ko-fi" ? "30" : "25"}
+              fill={`#${link.icon.hex}`}
+            >
+              <title>{link.icon.title}</title>
+              <path d={link.icon.path}></path>
+            </svg>
+          </a>
+        ))}
+      </div> */
+      }
     </div>
   );
 };

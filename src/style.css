@@ -15,16 +15,25 @@ html, body {
     height: 80vh;
 }
 
-h1 {
+.title {
     font-size: 5em;
     color: #4c4f69;
     margin: 0;
+    text-shadow: red;
+    line-height: 1;
+    transition: fill 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
-p {
+.title:hover {
+    transform: scale(1.1);
+    color: #7287fd;
+}
+
+.description {
     font-size: 1.2em;
     color: #4c4f69;
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0.25em;
 }
 
 
@@ -32,11 +41,31 @@ p {
     color: #4c4f69;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     gap: 1rem;
     font-size: 1.6em;
     margin-top: 0.25em;
 }
 
 .icon {
-    color: inherit;
+    transform: scale(1);
+    fill: #4c4f69;
+    transition: fill 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+    fill: #7287fd;
+}
+
+.subtitle {
+    font-size: 2.5em;
+    color: #4c4f69;
+    margin-top: 30;
+    margin-bottom: 0;
+    text-shadow: red;
+    line-height: 1;
+    transition: fill 0.5s ease-in-out, transform 0.5s ease-in-out;
 }

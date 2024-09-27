@@ -1,15 +1,16 @@
-import { createSignal } from "solid-js";
+import { createEffect, createSignal, For, JSX, onCleanup } from "solid-js";
+import "./style.css";
 import {
   siBluesky,
   siInstagram,
   siItchdotio,
   siKofi,
   siMastodon,
+  SimpleIcon,
   siThreads,
   siX,
   siYoutube,
 } from "simple-icons";
-import "./style.css";
 
 const socials_links = [
   {
@@ -50,7 +51,7 @@ const socials_links = [
   },
 ];
 
-const support_links = [
+const stores_links = [
   {
     name: "Ko-fi",
     icon: siKofi,
@@ -66,66 +67,135 @@ const support_links = [
 ];
 
 const Container = () => {
+  const [isHovered, setIsHovered] = createSignal(false);
+  let timer: number;
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+    if (timer) {
+      clearTimeout(timer);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    timer = setTimeout(() => {
+      setIsHovered(false);
+    }, 1000);
+  };
+
+  // Clean up the timeout if the component unmounts
+  onCleanup(() => {
+    if (timer) {
+      clearTimeout(timer);
+    }
+  });
+
+  createEffect(() => {
+    console.log(`isHovered: ${isHovered()}`);
+  });
+
   return (
     <div class="container">
-      <h1 class="title">Ame アメ</h1>
-      <p class="description">
-        @ameknite ✦ Character Artist
-      </p>
-      <div class="icons">
-        {socials_links.map((link) => (
-          <a
-            href={link.url}
-            title={link.name}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="icon"
-            aria-label={link.name}
-          >
-            <svg
-              class="icon"
-              xmlns="http://www.w3.org/2000/svg"
-              role="img"
-              viewBox="0 0 24 24"
-              width="25"
-              height="25"
-              fill={`#${link.icon.hex}`}
-            >
-              <title>{link.icon.title}</title>
-              <path d={link.icon.path}></path>
-            </svg>
-          </a>
-        ))}
-      </div>
-      {
-        /* <h2 class="subtitle">3D Models</h2>
-      <div class="icons">
-        {support_links.map((link) => (
-          <a
-            href={link.url}
-            title={link.name}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="icon"
-            aria-label={link.name}
-          >
-            <svg
-              class="icon"
-              xmlns="http://www.w3.org/2000/svg"
-              role="img"
-              viewBox="0 0 24 24"
-              width={link.name == "Ko-fi" ? "30" : "25"}
-              height={link.name == "Ko-fi" ? "30" : "25"}
-              fill={`#${link.icon.hex}`}
-            >
-              <title>{link.icon.title}</title>
-              <path d={link.icon.path}></path>
-            </svg>
-          </a>
-        ))}
-      </div> */
-      }
+      <Title text="Ame アメ" isHovered={isHovered()} />
+      <Description
+        text_front="@ameknite"
+        text_back="Character Artist"
+        handleMouseEnter={handleMouseEnter}
+        handleMouseLeave={handleMouseLeave}
+      />
+      <IconList socials={socials_links} />
+      <ButtonList stores={stores_links} />
     </div>
+  );
+};
+
+const Title = (
+  props: {
+    isHovered: any;
+    text: string;
+  },
+) => {
+  return (
+    <h1 class={`title ${props.isHovered ? "hovered" : ""}`}>
+      {props.text}
+    </h1>
+  );
+};
+
+const Description = (props) => {
+  return (
+    <p class="description">
+      {props.text_front}{" "}
+      <span
+        class="star"
+        onMouseEnter={props.handleMouseEnter}
+        onMouseLeave={props.handleMouseLeave}
+      >
+        ✦
+      </span>{" "}
+      {props.text_back}
+    </p>
+  );
+};
+const IconList = ({ socials }) => {
+  return (
+    <div class="icons">
+      <For each={socials}>
+        {(social) => (
+          <a
+            href={social.url}
+            title={social.name}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="icon"
+            aria-label={social.name}
+          >
+            <Icon icon={social.icon} /> {/* Pass social data to Icon */}
+          </a>
+        )}
+      </For>
+    </div>
+  );
+};
+
+const Icon = ({ icon }) => {
+  return (
+    <svg
+      class="icon"
+      xmlns="http://www.w3.org/2000/svg"
+      role="img"
+      fill={`#${icon.hex}`}
+    >
+      <title>{icon.title}</title>
+      <path d={icon.path}></path>
+    </svg>
+  );
+};
+
+const ButtonList = ({ stores }) => {
+  return (
+    <div class="button-list">
+      <For each={stores}>
+        {(store: SimpleIcon) => <ButtonContainer store={store} />}
+      </For>
+    </div>
+  );
+};
+
+const ButtonContainer = ({ store }) => {
+  return (
+    <a
+      class="button-container"
+      href={store.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={store.name}
+    >
+      <Icon icon={store.icon} />
+      <div class="button-text">
+        {store.name}
+      </div>
+    </a>
   );
 };
 

@@ -1,8 +1,9 @@
-
-html, body {
+html,
+body {
     font-family: InterVariable, sans-serif;
     background-color: #eff1f5;
     height: 100%;
+    width: 100%;
     margin: 0;
 }
 
@@ -16,26 +17,28 @@ html, body {
 }
 
 .title {
-    font-size: 5em;
+    font-size: 80px;
     color: #4c4f69;
-    margin: 0;
-    text-shadow: red;
+    margin-bottom: 0;
     line-height: 1;
-    transition: fill 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
-.title:hover {
+.title.hovered {
     transform: scale(1.1);
     color: #7287fd;
 }
 
 .description {
-    font-size: 1.2em;
+    font-size: 20px;
     color: #4c4f69;
-    margin-top: 0;
-    margin-bottom: 0.25em;
+    line-height: 1;
+    margin: 0;
 }
 
+.star {
+    color: #7287fd;
+}
 
 .icons {
     color: #4c4f69;
@@ -45,27 +48,61 @@ html, body {
     align-items: center;
     text-align: center;
     gap: 1rem;
-    font-size: 1.6em;
-    margin-top: 0.25em;
+    margin-top: 50px;
 }
 
 .icon {
+    height: 24px;
+    width: 24px;
+    flex-shrink: 0;
     transform: scale(1);
     fill: #4c4f69;
-    transition: fill 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transition: fill 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .icon:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
     fill: #7287fd;
 }
 
-.subtitle {
-    font-size: 2.5em;
+.button-list {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35vh;
+    box-sizing: border-box;
+}
+
+.button-container {
+    transform: scale(1);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    border: 2px #7287fd solid;
+    border-radius: 8px;
+    padding: 12px 12px;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: border-box;
     color: #4c4f69;
-    margin-top: 30;
-    margin-bottom: 0;
-    text-shadow: red;
-    line-height: 1;
-    transition: fill 0.5s ease-in-out, transform 0.5s ease-in-out;
+    background-color: #eff1f5;
+    transition: border 0.3s ease, transform 0.3s ease-in-out;
+}
+
+.button-container:hover {
+    transform: scale(1.1);
+    background-color: #7287fd;
+    border: 2px #4c4f69 solid;
+}
+
+.button-text {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 24px;
 }

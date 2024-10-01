@@ -29,7 +29,7 @@ const socials_links = [
     name: "Mastodon",
     icon: siMastodon,
     icon_beat: "fa-brands  fa-mastodon fa-beat",
-    url: "https://mastodon.gamedev.place/@ameknite",
+    url: "https://mastodon.social/@ameknite",
   },
   {
     name: "Threads",

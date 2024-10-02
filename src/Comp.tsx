@@ -90,10 +90,6 @@ const Container = () => {
     }
   });
 
-  createEffect(() => {
-    console.log(`isHovered: ${isHovered()}`);
-  });
-
   return (
     <div class="container">
       <Title text="Ame アメ" isHovered={isHovered()} />

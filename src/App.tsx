@@ -1,12 +1,7 @@
-import type { Component } from "solid-js";
-import Container from "./Comp";
-
-const App: Component = () => {
-  return (
-    <>
-      <Container />
-    </>
-  );
-};
+const App = (props) => (
+  <>
+    {props.children}
+  </>
+);
 
 export default App;

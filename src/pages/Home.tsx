@@ -17,7 +17,7 @@ const Home = () => {
   const donation_link = {
     name: "Support me",
     symbol: "volunteer_activism",
-    url: "/donations",
+    url: "/donate",
     is_material: true,
   };
   let mainContainerList = [kofi, donation_link];

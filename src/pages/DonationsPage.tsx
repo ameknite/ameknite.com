@@ -9,7 +9,7 @@ const DonationsPage: Component = () => (
         <Gap size="30px"></Gap>
         <Logo></Logo>
         <Gap size="30px"></Gap>
-        <div class="page-title">Donations</div>
+        <div class="page-title">Donate</div>
         <Gap size="10px"></Gap>
         <ButtonList links={donation_links} />
     </div>

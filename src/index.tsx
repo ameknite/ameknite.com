@@ -22,7 +22,7 @@ render(
     <Router root={App}>
       <Route path="/" component={Home} />
       <Route path="/links" component={SocialPage} />
-      <Route path="/donations" component={DonationPage} />
+      <Route path="/donate" component={DonationPage} />
       <Route path="/cryptocurrencies" component={CryptoPage} />
       <Route path="*paramName" component={Home} />
     </Router>

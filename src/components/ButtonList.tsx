@@ -116,7 +116,7 @@ const ButtonContainer = (
             <div class="button-text">
                 {copied()
                     ? (
-                        "Address copied ✔"
+                        "address copied ✔"
                     )
                     : link.name}
             </div>

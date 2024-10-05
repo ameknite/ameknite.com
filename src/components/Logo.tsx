@@ -37,11 +37,15 @@ const Title = (
     },
 ) => {
     return (
-        <h1
+        <a
+            href="/"
+            title="home"
+            rel="noopener noreferrer"
+            aria-label="home"
             class={`title ${props.isHovered ? "hovered" : ""}`}
         >
             {props.text}
-        </h1>
+        </a>
     );
 };
 

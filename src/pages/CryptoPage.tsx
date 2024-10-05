@@ -2,17 +2,17 @@ import type { Component } from "solid-js";
 import Gap from "../components/Gap";
 import Logo from "../components/Logo";
 import ButtonList from "../components/ButtonList";
-import { all_links } from "../data/links_data";
+import cryptocurrencies from "../data/cryptocurrencies_data";
 
-const SocialPage: Component = () => (
+const DonationsPage: Component = () => (
     <div class="container">
         <Gap size="30px"></Gap>
         <Logo></Logo>
         <Gap size="30px"></Gap>
-        <div class="page-title">Official Links</div>
-        <Gap size="5px"></Gap>
-        <ButtonList links={all_links} />
+        <div class="page-title">Cryptocurrencies</div>
+        <Gap size="10px"></Gap>
+        <ButtonList links={cryptocurrencies} />
     </div>
 );
 
-export default SocialPage;
+export default DonationsPage;

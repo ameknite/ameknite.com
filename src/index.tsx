@@ -4,9 +4,10 @@ import { Route, Router } from "@solidjs/router";
 
 import App from "./App";
 import Home from "./pages/Home";
-import SocialPage from "./pages/SocialPage";
+import SocialPage from "./pages/LinksPage";
 import DonationPage from "./pages/DonationsPage";
 import NotFound from "./pages/NotFound";
+import CryptoPage from "./pages/CryptoPage";
 
 const root = document.getElementById("root");
 
@@ -22,6 +23,7 @@ render(
       <Route path="/" component={Home} />
       <Route path="/links" component={SocialPage} />
       <Route path="/donations" component={DonationPage} />
+      <Route path="/cryptocurrencies" component={CryptoPage} />
       <Route path="*paramName" component={Home} />
     </Router>
   ),

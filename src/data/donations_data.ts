@@ -1,19 +1,22 @@
 import {
     siBitcoin,
-    siEthereum,
+    siItchdotio,
     siKofi,
     siPaypal,
-    siSolana,
     siStripe,
 } from "simple-icons";
-import { SuiSea, SuiWhite } from "./sui";
-import { AptosBlack, AptosWhite } from "./aptos";
 
-const payments = [
+const donation_links = [
     {
         name: "Ko-fi (Donations & Store)",
         icon: siKofi,
         url: "https://ko-fi.com/ameknite",
+        is_simple_icon: true,
+    },
+    {
+        name: "Itch.io (Store)",
+        icon: siItchdotio,
+        url: "https://ameknite.itch.io/",
         is_simple_icon: true,
     },
     {
@@ -38,47 +41,12 @@ const payments = [
         url: "https://www.paypal.me/ameknite",
         is_simple_icon: true,
     },
-];
-
-const cryptocurrencies = [
     {
-        name: "Bitcoin",
+        name: "Cryptocurrencies",
         icon: siBitcoin,
-        wallet: "bc1qg4883v63nhzgq930lz6hlw2wtlp8fxt40n9dl0",
+        url: "/cryptocurrencies",
         is_simple_icon: true,
-    },
-    {
-        name: "Ethereum",
-        icon: siEthereum,
-        wallet: "0x76678d5C34e3FE5aC57F3133d4Ca327b535724c5",
-        is_simple_icon: true,
-    },
-    {
-        name: "Solana",
-        icon: siSolana,
-        wallet: "Gg2dCzKdoCjnVjV4Lk9h8znjohbYm7grbfeQRnAJqxQK",
-        is_simple_icon: true,
-    },
-    {
-        name: "Sui",
-        wallet:
-            "0xd95f8f8682d1f846a43f0513b48ceae0629228b31ef25bf546f364b4f549cf7f",
-        color: "#4DA2FF",
-        normal: SuiSea,
-        hover: SuiWhite,
-        is_svg_solid: true,
-    },
-    {
-        name: "Aptos",
-        wallet:
-            "0x8d478155ea6876d8a91536b69fc4bcdfb17dea2fc6bf35527d3d4a4926561773",
-        color: "#000000",
-        normal: AptosBlack,
-        hover: AptosWhite,
-        is_svg_solid: true,
     },
 ];
 
-const donations_links = [...payments, ...cryptocurrencies];
-
-export { donations_links };
+export default donation_links;

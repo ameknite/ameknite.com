@@ -38,7 +38,7 @@ const donation_links = [
     {
         name: "PayPal",
         icon: siPaypal,
-        url: "https://www.paypal.me/ameknite",
+        url: "https://www.paypal.com/paypalme/ameknite",
         is_simple_icon: true,
     },
     {

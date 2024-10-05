@@ -79,6 +79,7 @@ const cryptocurrencies = [
         icon: siStellar,
         wallet: "GDIMCHISXZULBM5NYKIRZQ7ZROP2MQIMQDTLWW4T4DX6HEJYWZQNCMZW",
         is_simple_icon: true,
+        color: "#0F0F0F",
     },
 ];
 export default cryptocurrencies;

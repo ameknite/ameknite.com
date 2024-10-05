@@ -10,7 +10,7 @@ const cryptocurrencies = [
         is_simple_icon: true,
     },
     {
-        name: "Ethereum",
+        name: "Ethereum (Supports L2)",
         icon: siEthereum,
         wallet: "0x76678d5C34e3FE5aC57F3133d4Ca327b535724c5",
         is_simple_icon: true,

@@ -1,6 +1,7 @@
 import {
     siBitcoin,
     siBitcoincash,
+    siDash,
     siDogecoin,
     siEthereum,
     siLitecoin,
@@ -80,6 +81,12 @@ const cryptocurrencies = [
         wallet: "GDIMCHISXZULBM5NYKIRZQ7ZROP2MQIMQDTLWW4T4DX6HEJYWZQNCMZW",
         is_simple_icon: true,
         color: "#0F0F0F",
+    },
+    {
+        name: "Dash (DASH)",
+        icon: siDash,
+        wallet: "XfsnTJwWFZbtxTq1Kg38V5YUtVPzGSgMBG",
+        is_simple_icon: true,
     },
 ];
 export default cryptocurrencies;

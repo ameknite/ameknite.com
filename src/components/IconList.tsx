@@ -1,5 +1,5 @@
 import { createSignal, For } from "solid-js";
-import { emails } from "../data/links";
+import { emails } from "../data/links_data";
 import { accent_color, text_color } from "../data/colors";
 
 const IconList = ({ socials }) => {

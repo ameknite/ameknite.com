@@ -5,6 +5,7 @@ import { Route, Router } from "@solidjs/router";
 import App from "./App";
 import Home from "./pages/Home";
 import SocialPage from "./pages/SocialPage";
+import DonationPage from "./pages/DonationsPage";
 import NotFound from "./pages/NotFound";
 
 const root = document.getElementById("root");
@@ -20,6 +21,7 @@ render(
     <Router root={App}>
       <Route path="/" component={Home} />
       <Route path="/links" component={SocialPage} />
+      <Route path="/donations" component={DonationPage} />
       <Route path="*paramName" component={Home} />
     </Router>
   ),

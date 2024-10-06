@@ -3,6 +3,7 @@ import { SuiSea, SuiWhite } from "./icons/sui";
 import { AptosBlack, AptosWhite } from "./icons/aptos";
 import { Firo, FiroWhite } from "./icons/firo";
 import { Particl, ParticlWhite } from "./icons/particl";
+import { Epic } from "./icons/epic";
 
 const cryptocurrencies = [
     {
@@ -56,6 +57,14 @@ const cryptocurrencies = [
         color: "#9B1C2E",
         normal: Firo,
         hover: FiroWhite,
+        is_svg_solid: true,
+    },
+    {
+        name: "Epic Cash (EPIC)",
+        normal: Epic,
+        hover: Epic,
+        wallet: "pw1q25uvzhx6f6cx30mzf5t5s6arx3jc554js9zt6v",
+        color: "#2d3132",
         is_svg_solid: true,
     },
     {

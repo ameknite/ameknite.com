@@ -1,4 +1,4 @@
-const Particl = ({ color }) => {
+const Particl = () => {
     return (
         <svg
             version="1.1"

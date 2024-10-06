@@ -1,11 +1,11 @@
 import "../style.css";
-import { all_links, stores_links } from "../data/links_data";
+import { all_links } from "../data/links_data";
 import Logo from "../components/Logo";
 import Gap from "../components/Gap";
 import { IconList } from "../components/IconList";
 import ButtonListHome from "../components/ButtonListHome";
-import { SuiWhite } from "../data/sui";
 import { siKofi } from "simple-icons";
+import { Particl } from "../data/icons/particl";
 
 const Home = () => {
   const kofi = {

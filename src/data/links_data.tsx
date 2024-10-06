@@ -1,4 +1,4 @@
-import { CaraBlack, CaraWhite } from "./cara";
+import { CaraBlack, CaraWhite } from "./icons/cara";
 
 import {
     siArtstation,

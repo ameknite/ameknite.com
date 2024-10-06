@@ -1,16 +1,8 @@
-import {
-    siBitcoin,
-    siBitcoincash,
-    siDash,
-    siDogecoin,
-    siEthereum,
-    siLitecoin,
-    siMonero,
-    siSolana,
-    siStellar,
-} from "simple-icons";
-import { SuiSea, SuiWhite } from "./sui";
-import { AptosBlack, AptosWhite } from "./aptos";
+import { siBitcoin, siEthereum, siMonero, siSolana } from "simple-icons";
+import { SuiSea, SuiWhite } from "./icons/sui";
+import { AptosBlack, AptosWhite } from "./icons/aptos";
+import { Firo, FiroWhite } from "./icons/firo";
+import { Particl, ParticlWhite } from "./icons/particl";
 
 const cryptocurrencies = [
     {
@@ -23,31 +15,13 @@ const cryptocurrencies = [
     {
         name: "Ethereum (ETH)",
         icon: siEthereum,
-        wallet: "0xF10F002f1cF628f22859223589f39249e304775e",
+        wallet: "0x76678d5C34e3FE5aC57F3133d4Ca327b535724c5",
         is_simple_icon: true,
     },
     {
         name: "Solana (SOL)",
         icon: siSolana,
-        wallet: "AjWEgc8cWpjeUFRysB5rzfebPzKMeJG1yXsgGzpxG7G",
-        is_simple_icon: true,
-    },
-    {
-        name: "Dogecoin (DOGE)",
-        icon: siDogecoin,
-        wallet: "DBdNgQpyTjoZPCg259R66qRUoMJL53HaBu",
-        is_simple_icon: true,
-    },
-    {
-        name: "Bitcoin Cash (BCH)",
-        icon: siBitcoincash,
-        wallet: "bitcoincash:qqsxmceyep8kryje3zwv82vn9p720t9mrc8tw24fac",
-        is_simple_icon: true,
-    },
-    {
-        name: "Litecoin (LTC)",
-        icon: siLitecoin,
-        wallet: "ltc1qkjvr2946hwlzg83k836sz5e38c3z3zgmd7wntg",
+        wallet: "Gg2dCzKdoCjnVjV4Lk9h8znjohbYm7grbfeQRnAJqxQK",
         is_simple_icon: true,
     },
     {
@@ -76,17 +50,21 @@ const cryptocurrencies = [
         is_simple_icon: true,
     },
     {
-        name: "Stellar (XLM)",
-        icon: siStellar,
-        wallet: "GDIMCHISXZULBM5NYKIRZQ7ZROP2MQIMQDTLWW4T4DX6HEJYWZQNCMZW",
-        is_simple_icon: true,
-        color: "#0F0F0F",
+        name: "Firo (FIRO)",
+        wallet:
+            "sm1u5v48wvj4ks6ey5g0neafqwn38xrzgcxmtwc4dmejl5l3l7rdsdgg8aqg8w5nhnwtfjl6f47frcvf9uj6n72jxw0pkmqzpjrxs67ay8heh3rth88xxrsttrsalzhhu25qtv6hzcewd9m5",
+        color: "#9B1C2E",
+        normal: Firo,
+        hover: FiroWhite,
+        is_svg_solid: true,
     },
     {
-        name: "Dash (DASH)",
-        icon: siDash,
-        wallet: "XfsnTJwWFZbtxTq1Kg38V5YUtVPzGSgMBG",
-        is_simple_icon: true,
+        name: "Particl (PART)",
+        normal: Particl,
+        hover: ParticlWhite,
+        wallet: "pw1q25uvzhx6f6cx30mzf5t5s6arx3jc554js9zt6v",
+        color: "#46d593",
+        is_svg_solid: true,
     },
 ];
 export default cryptocurrencies;

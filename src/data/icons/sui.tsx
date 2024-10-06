@@ -1,4 +1,4 @@
-import { background_color, text_color } from "./colors";
+import { background_color, text_color } from "../colors";
 
 const SuiSea = () => {
     return (

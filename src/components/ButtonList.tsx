@@ -152,10 +152,6 @@ const MaterialIcon = ({ isHovered, symbol, color }) => {
 };
 
 const SvgIcon = ({ Component, isHovered, color }) => {
-    createEffect(() => {
-        console.log(isHovered());
-        console.log(isHovered() ? background_color : color);
-    });
     return (
         <span class="icon">
             <Component color={isHovered() ? background_color : color}>

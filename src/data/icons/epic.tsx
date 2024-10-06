@@ -25,8 +25,8 @@ const Epic = () => {
                     y2="10.7928"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop stop-color="#F3F5F4" />
-                    <stop offset="1" stop-color="#F3F5F4" />
+                    <stop stop-color="#eff1f5" />
+                    <stop offset="1" stop-color="#eff1f5" />
                 </linearGradient>
                 <linearGradient
                     id="paint1_linear_3823_45770"

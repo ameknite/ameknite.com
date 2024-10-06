@@ -11,7 +11,7 @@ const Firo = () => {
             style="enable-background:new 0 0 520 520;"
         >
             <style type="text/css">
-                {`.st0{fill:#FEFEFE;}
+                {`.st0{fill:#eff1f5;}
 	.st1{fill:#9B1C2E;}`}
             </style>
             <g>
@@ -48,7 +48,7 @@ const FiroWhite = () => {
             viewBox="0 0 520 520"
             style="enable-background:new 0 0 520 520;"
         >
-            <style type="text/css">{`.st0{fill:#FFFFFF;}`}</style>
+            <style type="text/css">{`.st0{fill:#eff1f5;}`}</style>
             <g>
                 <g>
                     <path

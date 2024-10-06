@@ -12,7 +12,7 @@ const AptosWhite = () => {
     return (
         <svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
             <defs>
-                <style>{`.b{fill:#fff;}`}</style>
+                <style>{`.b{fill:#eff1f5;}`}</style>
             </defs>
             <path
                 class="b"

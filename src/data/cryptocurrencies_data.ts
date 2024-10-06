@@ -63,7 +63,8 @@ const cryptocurrencies = [
         name: "Epic Cash (EPIC)",
         normal: Epic,
         hover: Epic,
-        wallet: "pw1q25uvzhx6f6cx30mzf5t5s6arx3jc554js9zt6v",
+        wallet:
+            "esWtitYQPrbE2uWYQsUjoQkugr2FpSAaPGyKCgHvi3SwPkgTWpov@epicbox.stackwallet.com",
         color: "#2d3132",
         is_svg_solid: true,
     },

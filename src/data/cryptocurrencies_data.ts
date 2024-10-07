@@ -1,6 +1,9 @@
 import {
     siBitcoin,
+    siBitcoincash,
+    siDogecoin,
     siEthereum,
+    siLitecoin,
     siMonero,
     siPolkadot,
     siSolana,
@@ -32,6 +35,18 @@ const cryptocurrencies = [
         is_simple_icon: true,
     },
     {
+        name: "Dogecoin (DOGE)",
+        icon: siDogecoin,
+        wallet: "D8vhx1h4mZoicU7Wnfyo85XLcWt8fSSvZv",
+        is_simple_icon: true,
+    },
+    {
+        name: "Bitcoin Cash (BCH)",
+        icon: siBitcoincash,
+        wallet: "bitcoincash:qqsxmceyep8kryje3zwv82vn9p720t9mrc8tw24fac",
+        is_simple_icon: true,
+    },
+    {
         name: "Polkadot (DOT)",
         icon: siPolkadot,
         wallet: "14ETbrUvUWDzojC4wJ4wcgA3m6NGVTq6AHedT525uE1KiVBJ",
@@ -45,6 +60,12 @@ const cryptocurrencies = [
         normal: SuiSea,
         hover: SuiWhite,
         is_svg_solid: true,
+    },
+    {
+        name: "Litecoin (LTC)",
+        icon: siLitecoin,
+        wallet: "ltc1qy8x467rk33req623gkyc5uxqxuv3gpa8y658s3",
+        is_simple_icon: true,
     },
     {
         name: "Aptos (APT)",

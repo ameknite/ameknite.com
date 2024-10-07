@@ -8,15 +8,9 @@ import {
 
 const donation_links = [
     {
-        name: "Ko-fi (Donations & Store)",
+        name: "Ko-fi",
         icon: siKofi,
         url: "https://ko-fi.com/ameknite",
-        is_simple_icon: true,
-    },
-    {
-        name: "Itch.io (Store)",
-        icon: siItchdotio,
-        url: "https://ameknite.itch.io/",
         is_simple_icon: true,
     },
     {
@@ -44,7 +38,7 @@ const donation_links = [
     {
         name: "Cryptocurrencies",
         icon: siBitcoin,
-        url: "/cryptocurrencies",
+        url: "/donate/cryptocurrencies",
         is_simple_icon: true,
     },
 ];

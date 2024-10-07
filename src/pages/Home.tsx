@@ -1,5 +1,5 @@
 import "../style.css";
-import { all_links } from "../data/links_data";
+import { all_links, stores_links } from "../data/links_data";
 import Logo from "../components/Logo";
 import Gap from "../components/Gap";
 import { IconList } from "../components/IconList";
@@ -8,19 +8,13 @@ import { siKofi } from "simple-icons";
 import { Particl } from "../data/icons/particl";
 
 const Home = () => {
-  const kofi = {
-    name: "Ko-fi",
-    icon: siKofi,
-    url: "https://ko-fi.com/ameknite",
-    is_simple_icon: true,
-  };
   const donation_link = {
-    name: "Support me",
+    name: "Donate",
     symbol: "volunteer_activism",
     url: "/donate",
     is_material: true,
   };
-  let mainContainerList = [kofi, donation_link];
+  let mainContainerList = [...stores_links, donation_link];
   return (
     <div class="container">
       <Gap size="200px"></Gap>

@@ -23,7 +23,7 @@ render(
       <Route path="/" component={Home} />
       <Route path="/links" component={SocialPage} />
       <Route path="/donate" component={DonationPage} />
-      <Route path="/cryptocurrencies" component={CryptoPage} />
+      <Route path="/donate/cryptocurrencies" component={CryptoPage} />
       <Route path="*paramName" component={Home} />
     </Router>
   ),

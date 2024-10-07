@@ -22,13 +22,13 @@ const cryptocurrencies = [
     {
         name: "Ethereum (ETH)",
         icon: siEthereum,
-        wallet: "0x76678d5C34e3FE5aC57F3133d4Ca327b535724c5",
+        wallet: "0xF10F002f1cF628f22859223589f39249e304775e",
         is_simple_icon: true,
     },
     {
         name: "Solana (SOL)",
         icon: siSolana,
-        wallet: "Gg2dCzKdoCjnVjV4Lk9h8znjohbYm7grbfeQRnAJqxQK",
+        wallet: "AjWEgc8cWpjeUFRysB5rzfebPzKMeJG1yXsgGzpxG7G",
         is_simple_icon: true,
     },
     {

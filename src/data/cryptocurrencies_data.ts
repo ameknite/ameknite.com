@@ -22,7 +22,7 @@ const cryptocurrencies = [
     {
         name: "Ethereum (ETH)",
         icon: siEthereum,
-        wallet: "0xF10F002f1cF628f22859223589f39249e304775e",
+        wallet: "0x21255C783b841C35e386Dd0D4397D5DE4Ca8370e",
         is_simple_icon: true,
     },
     {

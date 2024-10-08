@@ -8,6 +8,7 @@ import SocialPage from "./pages/LinksPage";
 import DonationPage from "./pages/DonationsPage";
 import NotFound from "./pages/NotFound";
 import CryptoPage from "./pages/CryptoPage";
+import PgpKey from "./pages/PgpKey";
 
 const root = document.getElementById("root");
 
@@ -24,6 +25,7 @@ render(
       <Route path="/links" component={SocialPage} />
       <Route path="/donate" component={DonationPage} />
       <Route path="/donate/cryptocurrencies" component={CryptoPage} />
+      <Route path="/.well-known/pgp-key.txt" component={PgpKey} />
       <Route path="*paramName" component={Home} />
     </Router>
   ),

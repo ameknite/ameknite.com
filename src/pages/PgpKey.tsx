@@ -1,20 +1,22 @@
-import { createSignal, onMount } from "solid-js";
-
 const PgpKey = () => {
-    const [fileContent, setFileContent] = createSignal("");
+    const pgp_key = `-----BEGIN PGP PUBLIC KEY BLOCK-----
 
-    onMount(async () => {
-        const response = await fetch(
-            "../../.well-known/publickey.ameknite@proton.me-bb1050f0617519e5e2da68ca53469a112ac68d5e.asc",
-        );
-        const text = await response.text();
-        setFileContent(text);
-    });
-
+xjMEZlAP1hYJKwYBBAHaRw8BAQdAaitYgmKXNOK6boJRw7EIXTVF9J6Myxv8
+c564p7ioXNXNJ2FtZWtuaXRlQHByb3Rvbi5tZSA8YW1la25pdGVAcHJvdG9u
+Lm1lPsKMBBAWCgA+BYJmUA/WBAsJBwgJkFNGmhEqxo1eAxUICgQWAAIBAhkB
+ApsDAh4BFiEEuxBQ8GF1GeXi2mjKU0aaESrGjV4AAORnAP95H7WYvhAITHYU
+IkUi3LRPkUlPi7ohe1+XASZOvDK37wEAq1oF/hAA86SFrfFg2nI0dh5AuAdW
+toKXEjV7OqbpjwzOOARmUA/WEgorBgEEAZdVAQUBAQdAQPsURQuzRTVpQkS2
+wLVxxXcZ4zXdKoB1YTVdSX7RLlQDAQgHwncEGBYKACoFgmZQD9YJkFNGmhEq
+xo1eApsMFiEEuxBQ8GF1GeXi2mjKU0aaESrGjV4AANuNAPwN7eUedb5y3os9
+jHHXAs3jnl0SLVAFj+jnQlwba09SngD45eNERR2lPQq5lFT6GheM2QoBC9VI
+M4HbLEf969rzCw==
+=Kn19
+-----END PGP PUBLIC KEY BLOCK-----`;
     return (
-        <div>
-            <pre>{fileContent()}</pre>
-        </div>
+        <pre>
+            {pgp_key}
+        </pre>
     );
 };
 

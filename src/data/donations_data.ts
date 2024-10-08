@@ -1,16 +1,11 @@
-import {
-    siBitcoin,
-    siItchdotio,
-    siKofi,
-    siPaypal,
-    siStripe,
-} from "simple-icons";
+import { siBitcoin, siKofi, siPaypal, siStripe } from "simple-icons";
+import { crypto, kofi } from "./routes";
 
 const donation_links = [
     {
         name: "Ko-fi",
         icon: siKofi,
-        url: "https://ko-fi.com/ameknite",
+        url: "https://ko-fi.com/ameknite/?hidefeed=true&widget=true",
         is_simple_icon: true,
     },
     {
@@ -38,7 +33,7 @@ const donation_links = [
     {
         name: "Cryptocurrencies",
         icon: siBitcoin,
-        url: "/donate/cryptocurrencies",
+        url: crypto,
         is_simple_icon: true,
     },
 ];

@@ -9,6 +9,15 @@ import DonationPage from "./pages/DonationsPage";
 import NotFound from "./pages/NotFound";
 import CryptoPage from "./pages/CryptoPage";
 import PgpKey from "./pages/PgpKey";
+import {
+  crypto,
+  donate,
+  home,
+  kofi,
+  links,
+  not_found,
+  pgp_key,
+} from "./data/routes";
 
 const root = document.getElementById("root");
 
@@ -21,12 +30,12 @@ if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
 render(
   () => (
     <Router root={App}>
-      <Route path="/" component={Home} />
-      <Route path="/links" component={SocialPage} />
-      <Route path="/donate" component={DonationPage} />
-      <Route path="/donate/cryptocurrencies" component={CryptoPage} />
-      <Route path="/.well-known/pgp-key.txt" component={PgpKey} />
-      <Route path="*paramName" component={Home} />
+      <Route path={home} component={Home} />
+      <Route path={links} component={SocialPage} />
+      <Route path={donate} component={DonationPage} />
+      <Route path={crypto} component={CryptoPage} />
+      <Route path={pgp_key} component={PgpKey} />
+      <Route path={not_found} component={Home} />
     </Router>
   ),
   root,

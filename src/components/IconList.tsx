@@ -1,6 +1,7 @@
 import { createSignal, For } from "solid-js";
 import { emails } from "../data/links_data";
 import { accent_color, text_color } from "../data/colors";
+import { links } from "../data/routes";
 
 const IconList = ({ socials }) => {
     const selected_socials = [
@@ -21,7 +22,7 @@ const IconList = ({ socials }) => {
             </For>
             <MaterialLink
                 symbol="expand_circle_right"
-                url={"/links"}
+                url={links}
                 size="16px"
             >
             </MaterialLink>

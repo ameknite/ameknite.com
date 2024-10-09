@@ -23,6 +23,7 @@ import {
     siX,
     siYoutube,
 } from "simple-icons";
+import { Kofi } from "./icons/kofi";
 
 const website_links = [
     {
@@ -49,9 +50,10 @@ const emails = [
 const stores_links = [
     {
         name: "Ko-fi",
-        icon: siKofi,
+        component_icon: Kofi,
+        color: "#FF6433",
         url: "https://ko-fi.com/ameknite",
-        is_simple_icon: true,
+        is_svg: true,
     },
     {
         name: "Itch.io",

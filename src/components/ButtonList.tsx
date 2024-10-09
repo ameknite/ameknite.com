@@ -33,26 +33,25 @@ const ButtonContainer = (
             setTimeout(() => setCopied(false), 2000);
         }
     };
+
     let icon_color = accent_color;
+    let hover_color = accent_color;
+
     if (link.is_simple_icon) {
         icon_color = "#" + link.icon.hex;
-    }
-
-    let hover_color = icon_color;
-
-    if (link.is_svg_solid || link.is_svg) {
-        hover_color = link.color;
-    }
-
-    if (is_color_default) {
-        hover_color = accent_color;
-        icon_color = text_color;
+        hover_color = icon_color;
     }
 
     if (link.color) {
         icon_color = link.color;
         hover_color = link.color;
     }
+
+    if (is_color_default) {
+        icon_color = text_color;
+        hover_color = accent_color;
+    }
+
     return (
         <a
             onclick={handleClick}
@@ -107,8 +106,8 @@ const ButtonContainer = (
                 <Match when={link.is_svg}>
                     <SvgIcon
                         isHovered={isHovered}
-                        Component={link.component}
-                        color={hover_color}
+                        ComponentIcon={link.component_icon}
+                        color={icon_color}
                     >
                     </SvgIcon>
                 </Match>
@@ -151,11 +150,14 @@ const MaterialIcon = ({ isHovered, symbol, color }) => {
     );
 };
 
-const SvgIcon = ({ Component, isHovered, color }) => {
+const SvgIcon = ({ ComponentIcon, isHovered, color }) => {
     return (
         <span class="icon">
-            <Component color={isHovered() ? background_color : color}>
-            </Component>
+            <ComponentIcon
+                color={color}
+                isHovered={isHovered}
+            >
+            </ComponentIcon>
         </span>
     );
 };

@@ -1,6 +1,7 @@
 import {
     siBitcoin,
     siBitcoincash,
+    siCardano,
     siDogecoin,
     siEthereum,
     siLitecoin,
@@ -38,6 +39,13 @@ const cryptocurrencies = [
         name: "Dogecoin (DOGE)",
         icon: siDogecoin,
         wallet: "D8vhx1h4mZoicU7Wnfyo85XLcWt8fSSvZv",
+        is_simple_icon: true,
+    },
+    {
+        name: "Cardano (ADA)",
+        icon: siCardano,
+        wallet:
+            "addr1qxgryuy4ddq363vgx6nwypyefkeec7kf0fsrmt9grxdkv04l2n4lnr5w9eelks0tr2lhvu3ysgecf20ghtjdq7qy7qwquln32z",
         is_simple_icon: true,
     },
     {

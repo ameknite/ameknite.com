@@ -1,9 +1,15 @@
-import { siBitcoin, siKofi, siPaypal, siStripe } from "simple-icons";
-import { crypto, kofi } from "./routes";
-import { stores_links } from "./links_data";
+import { siBitcoin, siPaypal, siStripe } from "simple-icons";
+import { crypto } from "./routes";
+import { Kofi } from "./icons/kofi";
 
 const donation_links = [
-    stores_links[0],
+    {
+        name: "Ko-fi",
+        component_icon: Kofi,
+        color: "#FF6433",
+        url: "https://ko-fi.com/ameknite/?hidefeed=true&widget=true",
+        is_svg: true,
+    },
     {
         name: "Stripe (Card, One-Time)",
         description: "Card - One Time Donation",

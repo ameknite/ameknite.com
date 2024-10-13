@@ -11,9 +11,13 @@ const IconList = ({ socials }) => {
         "Instagram",
         "YouTube",
     ];
-    const filtered_socials = socials.filter((
+    let filtered_socials = socials.filter((
         social: { name: string },
     ) => selected_socials.includes(social.name));
+
+    filtered_socials.sort((a: { name: string }, b: { name: string }) =>
+        selected_socials.indexOf(a.name) - selected_socials.indexOf(b.name)
+    );
 
     return (
         <div class="icons">

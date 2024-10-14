@@ -17,9 +17,15 @@ importers:
       simple-icons:
         specifier: ^13.11.0
         version: 13.11.0
+      solid-floating-ui:
+        specifier: ^0.3.1
+        version: 0.3.1(@floating-ui/dom@1.6.11)(solid-js@1.9.1)
       solid-js:
         specifier: 1.9.1
         version: 1.9.1
+      solid-qr-code:
+        specifier: ^0.1.11
+        version: 0.1.11(solid-js@1.9.1)
     devDependencies:
       solid-devtools:
         specifier: 0.30.1
@@ -271,6 +277,15 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [win32]
+
+  '@floating-ui/core@1.6.8':
+    resolution: {integrity: sha512-7XJ9cPU+yI2QeLS+FCSlqNFZJq8arvswefkZrYI1yQBbftw6FyrZOxYSh+9S7z7TpeWlRt9zJ5IhM1WIL334jA==}
+
+  '@floating-ui/dom@1.6.11':
+    resolution: {integrity: sha512-qkMCxSR24v2vGkhYDo/UzxfJN3D4syqSjyuTFz6C7XcpU1pASPRieNI0Kj5VP3/503mOfYiGY891ugBX1GlABQ==}
+
+  '@floating-ui/utils@0.2.8':
+    resolution: {integrity: sha512-kym7SodPp8/wloecOpcmSnWJsK7M0E5Wg8UcFA+uO4B9s5d0ywXOEro/8HM9x0rW+TljRzul/14UYz3TleT3ig==}
 
   '@jest/schemas@29.6.3':
     resolution: {integrity: sha512-mo5j5X+jIZmJQveBKeS/clAueipV7KgiX1vMgCxam1RNYiqE1w62n0/tJJnHtjW8ZHcQco5gY85jA3mi0L+nSA==}
@@ -934,8 +949,21 @@ packages:
       vite:
         optional: true
 
+  solid-floating-ui@0.3.1:
+    resolution: {integrity: sha512-o/QmGsWPS2Z3KidAxP0nDvN7alI7Kqy0kU+wd85Fz+au5SYcnYm7I6Fk3M60Za35azsPX0U+5fEtqfOuk6Ao0Q==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      '@floating-ui/dom': ^1.5
+      solid-js: ^1.8
+
   solid-js@1.9.1:
     resolution: {integrity: sha512-Gd6QWRFfO2XKKZqVK4YwbhWZkr0jWw1dYHOt+VYebomeyikGP0SuMflf42XcDuU9HAEYDArFJIYsBNjlE7iZsw==}
+
+  solid-qr-code@0.1.11:
+    resolution: {integrity: sha512-8TpELeuK6OoPz5TfJaycsna63IivaSr6Y34qU79eYDF+SRTowO9os8gpElNvNe2FFROZuMZpf28jgmn9gV20Eg==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      solid-js: ^1.8.0
 
   solid-refresh@0.6.3:
     resolution: {integrity: sha512-F3aPsX6hVw9ttm5LYlth8Q15x6MlI/J3Dn+o3EQyRTtTxidepSTwAYdozt01/YA+7ObcciagGEyXIopGZzQtbA==}
@@ -1295,6 +1323,17 @@ snapshots:
 
   '@esbuild/win32-x64@0.21.5':
     optional: true
+
+  '@floating-ui/core@1.6.8':
+    dependencies:
+      '@floating-ui/utils': 0.2.8
+
+  '@floating-ui/dom@1.6.11':
+    dependencies:
+      '@floating-ui/core': 1.6.8
+      '@floating-ui/utils': 0.2.8
+
+  '@floating-ui/utils@0.2.8': {}
 
   '@jest/schemas@29.6.3':
     dependencies:
@@ -1986,11 +2025,20 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  solid-floating-ui@0.3.1(@floating-ui/dom@1.6.11)(solid-js@1.9.1):
+    dependencies:
+      '@floating-ui/dom': 1.6.11
+      solid-js: 1.9.1
+
   solid-js@1.9.1:
     dependencies:
       csstype: 3.1.3
       seroval: 1.1.1
       seroval-plugins: 1.1.1(seroval@1.1.1)
+
+  solid-qr-code@0.1.11(solid-js@1.9.1):
+    dependencies:
+      solid-js: 1.9.1
 
   solid-refresh@0.6.3(solid-js@1.9.1):
     dependencies:

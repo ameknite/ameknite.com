@@ -1,6 +1,8 @@
 import { createEffect, createSignal, For, Match, Switch } from "solid-js";
 import { accent_color, background_color, text_color } from "../data/colors";
 import { writeClipboard } from "@solid-primitives/clipboard";
+import FloatingWindow from "./FloatingWindow";
+import Gap from "./Gap";
 
 const ButtonList = ({ links }) => {
     return (
@@ -20,7 +22,7 @@ const ButtonContainer = (
     {
         link,
         border_color = text_color,
-        is_color_default: is_color_default = false,
+        is_color_default = false,
     },
 ) => {
     const [isHovered, setIsHovered] = createSignal(false);
@@ -53,77 +55,77 @@ const ButtonContainer = (
     }
 
     return (
-        <a
-            onclick={handleClick}
-            class="button-container"
-            href={link.url}
-            rel="noopener noreferrer"
-            aria-label={link.name}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-            style={{
-                "background-color": isHovered()
-                    ? hover_color
-                    : background_color,
-                "border": isHovered()
-                    ? `2px ${hover_color} solid`
-                    : `2px ${border_color} solid`,
-                color: isHovered() ? background_color : text_color,
-            }}
-        >
-            <Switch>
-                <Match when={link.is_simple_icon}>
-                    <SimplerIcon
-                        icon={link.icon}
-                        isHovered={isHovered}
-                        color={icon_color}
-                    />
-                </Match>
-                <Match when={link.is_material}>
-                    <MaterialIcon
-                        isHovered={isHovered}
-                        symbol={link.symbol}
-                        color={icon_color}
-                    >
-                    </MaterialIcon>
-                </Match>
-                <Match when={link.wallet}>
-                    <SvgSolidIcon
-                        isHovered={isHovered}
-                        componentNormal={link.normal}
-                        componentHover={link.hover}
-                    >
-                    </SvgSolidIcon>
-                </Match>
-                <Match when={link.is_svg_solid}>
-                    <SvgSolidIcon
-                        isHovered={isHovered}
-                        componentNormal={link.normal}
-                        componentHover={link.hover}
-                    >
-                    </SvgSolidIcon>
-                </Match>
-                <Match when={link.is_svg}>
-                    <SvgIcon
-                        isHovered={isHovered}
-                        ComponentIcon={link.component_icon}
-                        color={icon_color}
-                    >
-                    </SvgIcon>
-                </Match>
-            </Switch>
-            <div class="button-text">
-                {copied()
-                    ? (
-                        "address copied ✔"
-                    )
-                    : link.name}
-            </div>
-        </a>
+        <div class="button-clear">
+            <FloatingWindow
+                link={link}
+                color={hover_color}
+                isButtonHovered={isHovered}
+            >
+            </FloatingWindow>
+            <a
+                onclick={handleClick}
+                class="button-container"
+                href={link.url}
+                rel="noopener noreferrer"
+                aria-label={link.name}
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+                style={{
+                    "background-color": isHovered()
+                        ? hover_color
+                        : background_color,
+                    "border": isHovered()
+                        ? `2px ${hover_color} solid`
+                        : `2px ${border_color} solid`,
+                    color: isHovered() ? background_color : text_color,
+                }}
+            >
+                <Switch>
+                    <Match when={link.is_simple_icon}>
+                        <SimpleIcon
+                            icon={link.icon}
+                            isHovered={isHovered}
+                            color={icon_color}
+                        />
+                    </Match>
+                    <Match when={link.is_material}>
+                        <MaterialIcon
+                            isHovered={isHovered}
+                            symbol={link.symbol}
+                            color={icon_color}
+                        >
+                        </MaterialIcon>
+                    </Match>
+                    <Match when={link.is_svg_solid}>
+                        <SvgSolidIcon
+                            isHovered={isHovered}
+                            normalComponent={link.normal}
+                            hoverComponent={link.hover}
+                        >
+                        </SvgSolidIcon>
+                    </Match>
+                    <Match when={link.is_svg}>
+                        <SvgIcon
+                            isHovered={isHovered}
+                            ComponentIcon={link.component_icon}
+                            color={icon_color}
+                        >
+                        </SvgIcon>
+                    </Match>
+                </Switch>
+                <div class="button-text">
+                    {copied()
+                        ? (
+                            "address copied ✔"
+                        )
+                        : link.name}
+                </div>
+            </a>
+        </div>
     );
 };
 
-const SimplerIcon = ({ icon, isHovered, color }) => {
+const SimpleIcon = ({ icon, isHovered, color }) => {
     return (
         <svg
             class="icon"
@@ -162,13 +164,14 @@ const SvgIcon = ({ ComponentIcon, isHovered, color }) => {
     );
 };
 
-const SvgSolidIcon = ({ componentNormal, componentHover, isHovered }) => {
+const SvgSolidIcon = (
+    { normalComponent, hoverComponent, isHovered },
+) => {
     return (
         <span class="icon">
-            {isHovered() ? componentHover : componentNormal}
+            {isHovered() ? hoverComponent : normalComponent}
         </span>
     );
 };
 
-export default ButtonList;
-export { ButtonContainer };
+export { ButtonContainer, ButtonList };

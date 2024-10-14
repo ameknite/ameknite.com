@@ -1,8 +1,9 @@
 import type { Component } from "solid-js";
 import Gap from "../components/Gap";
 import Logo from "../components/Logo";
-import ButtonList from "../components/ButtonList";
+import { ButtonList } from "../components/ButtonList";
 import { all_links } from "../data/links_data";
+import FloatingWindow from "../components/FloatingWindow";
 
 const SocialPage: Component = () => (
     <div class="container">

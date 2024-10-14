@@ -1,7 +1,7 @@
 import type { Component } from "solid-js";
 import Gap from "../components/Gap";
 import Logo from "../components/Logo";
-import ButtonList from "../components/ButtonList";
+import { ButtonList } from "../components/ButtonList";
 import donation_links from "../data/donations_data";
 
 const DonationsPage: Component = () => (

@@ -24,6 +24,15 @@ import {
     siYoutube,
 } from "simple-icons";
 import { Kofi } from "./icons/kofi";
+import { links } from "./routes";
+
+const route_link = {
+    symbol: "expand_circle_right",
+    name: "+links",
+    route: links,
+    url: "https://ameknite.com/links",
+    size: "16px"
+};
 
 const website_links = [
     {
@@ -218,4 +227,4 @@ const all_links = [
     ...code_links,
 ];
 
-export { all_links, emails, stores_links };
+export { all_links, emails, stores_links, route_link };

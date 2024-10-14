@@ -1,7 +1,6 @@
 import { createSignal, For } from "solid-js";
-import { emails } from "../data/links_data";
+import { route_link } from "../data/links_data";
 import { accent_color, text_color } from "../data/colors";
-import { links } from "../data/routes";
 
 const IconList = ({ socials }) => {
     const selected_socials = [
@@ -25,9 +24,9 @@ const IconList = ({ socials }) => {
                 {(social) => <SimpleLink link={social}></SimpleLink>}
             </For>
             <MaterialLink
-                symbol="expand_circle_right"
-                url={links}
-                size="16px"
+                symbol={route_link.symbol}
+                url={route_link.route}
+                size={route_link.size}
             >
             </MaterialLink>
         </div>
@@ -45,14 +44,14 @@ const SimpleLink = (
             class="icon"
             aria-label={link.name}
         >
-            <SimpleIcon
+            <SimpleSelfIcon
                 icon={link.icon}
             />
         </a>
     );
 };
 
-const SimpleIcon = ({ icon, color = text_color }) => {
+const SimpleSelfIcon = ({ icon, color = text_color }) => {
     const [isHovered, setIsHovered] = createSignal(false);
     return (
         <svg
@@ -72,9 +71,9 @@ const SimpleIcon = ({ icon, color = text_color }) => {
 const MaterialLink = (
     {
         symbol,
-        url = "",
+        url,
         color = text_color,
-        size = "24",
+        size,
     },
 ) => {
     const [isHovered, setIsHovered] = createSignal(false);
@@ -97,4 +96,4 @@ const MaterialLink = (
     );
 };
 
-export { IconList, MaterialLink, SimpleIcon };
+export { IconList, MaterialLink };

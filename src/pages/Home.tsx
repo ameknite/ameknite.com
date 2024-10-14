@@ -5,6 +5,8 @@ import Gap from "../components/Gap";
 import { IconList } from "../components/IconList";
 import ButtonListHome from "../components/ButtonListHome";
 import { donate } from "../data/routes";
+import FloatingWindow from "../components/FloatingWindow";
+import { siBluesky, siYoutube } from "simple-icons";
 
 const Home = () => {
   const donation_link = {
@@ -12,6 +14,7 @@ const Home = () => {
     symbol: "volunteer_activism",
     url: donate,
     is_material: true,
+    qr_url: "https://ameknite.com/donate",
   };
   let mainContainerList = [...stores_links, donation_link];
   return (
@@ -22,8 +25,21 @@ const Home = () => {
       <IconList socials={all_links} />
       <Gap size="10px"></Gap>
       <ButtonListHome links={mainContainerList} />
+      {
+        /* <FloatingWindow
+        link={youtube}
+        color={"#" + youtube.icon.hex}
+      /> */
+      }
     </div>
   );
+};
+
+const youtube = {
+  name: "BlueSky",
+  icon: siBluesky,
+  url: "https://bsky.app/profile/ameknite.com",
+  is_simple_icon: true,
 };
 
 export default Home;

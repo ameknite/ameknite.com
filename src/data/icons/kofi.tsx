@@ -1,6 +1,6 @@
 import { background_color } from "../colors";
 
-const Kofi = ({ isHovered, color }) => {
+const Kofi = ({ isHovered = () => false, color }) => {
     return (
         <svg
             role="img"

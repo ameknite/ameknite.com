@@ -36,6 +36,7 @@ const donation_links = [
         name: "Cryptocurrencies",
         icon: siBitcoin,
         url: crypto,
+        qr_url: "https://ameknite.com/donate",
         is_simple_icon: true,
     },
 ];

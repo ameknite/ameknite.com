@@ -6,9 +6,7 @@ function FloatingWindow({ link, color, isButtonHovered }) {
     const [isVisible, setIsVisible] = createSignal(false);
     let floatingWindowRef;
 
-    const toggleWindow = () => {
-        setIsVisible(!isVisible());
-    };
+    const toggleWindow = () => setIsVisible(true);
 
     const handleClickOutside = (event) => {
         if (floatingWindowRef && !floatingWindowRef.contains(event.target)) {
@@ -19,16 +17,15 @@ function FloatingWindow({ link, color, isButtonHovered }) {
     createEffect(() => {
         if (isVisible()) {
             document.addEventListener("click", handleClickOutside);
+            onCleanup(() =>
+                document.removeEventListener("click", handleClickOutside)
+            );
         }
-
-        onCleanup(() => {
-            document.removeEventListener("click", handleClickOutside);
-        });
     });
 
     const size = 400;
     let url = link.qr_url != null ? link.qr_url : link.url;
-    url = link.wallet != null ? link.wallet : link.url;
+    url = link.wallet != null ? link.wallet : url;
 
     return (
         <div onclick={toggleWindow}>
@@ -72,6 +69,12 @@ function FloatingWindow({ link, color, isButtonHovered }) {
                         width={size}
                         height={size}
                     />
+                    <div
+                        class="floating-url-text"
+                        style={{ color: background_color }}
+                    >
+                        {url}
+                    </div>
                 </div>
             )}
         </div>

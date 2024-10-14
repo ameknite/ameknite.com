@@ -145,8 +145,9 @@ body {
     transform: translate(-50%, -50%);
     border: 2px solid;
     z-index: 100;
-    padding: 13px 25px 25px 25px;
+    padding: 13px 25px 13px 25px;
     border-radius: 8px;
+    width: 400px;
 }
 
 .floating-container {
@@ -170,4 +171,15 @@ body {
     margin-right: 24px;
     font-weight: bold;
     font-size: 24px;
+}
+
+.floating-url-text {
+    padding-top: 12px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    width: auto;
+    overflow-wrap: anywhere;
 }

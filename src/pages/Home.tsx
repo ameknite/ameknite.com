@@ -19,7 +19,7 @@ const Home = () => {
   let mainContainerList = [...stores_links, donation_link];
   return (
     <div class="container">
-      <Gap size="200px"></Gap>
+      <Gap size="150px"></Gap>
       <Logo></Logo>
       <Gap size="50px"></Gap>
       <IconList socials={all_links} />

@@ -23,7 +23,7 @@ function FloatingWindow({ link, color, isButtonHovered }) {
         }
     });
 
-    const size = 400;
+    const size = 256;
     let url = link.qr_url != null ? link.qr_url : link.url;
     url = link.wallet != null ? link.wallet : url;
 

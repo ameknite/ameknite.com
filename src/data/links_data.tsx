@@ -31,7 +31,7 @@ const route_link = {
     name: "+links",
     route: links,
     url: "https://ameknite.com/links",
-    size: "16px"
+    size: "16px",
 };
 
 const website_links = [
@@ -148,12 +148,12 @@ const stream_links = [
         url: "https://www.twitch.tv/ameknite",
         is_simple_icon: true,
     },
-    {
-        name: "Kick",
-        icon: siKick,
-        url: "https://www.twitch.tv/ameknite",
-        is_simple_icon: true,
-    },
+    // {
+    //     name: "Kick",
+    //     icon: siKick,
+    //     url: "https://www.twitch.tv/ameknite",
+    //     is_simple_icon: true,
+    // },
 ];
 
 const art_links = [
@@ -227,4 +227,4 @@ const all_links = [
     ...code_links,
 ];
 
-export { all_links, emails, stores_links, route_link };
+export { all_links, emails, route_link, stores_links };

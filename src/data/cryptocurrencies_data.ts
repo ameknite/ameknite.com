@@ -8,6 +8,7 @@ import {
     siMonero,
     siPolkadot,
     siSolana,
+    siStellar,
 } from "simple-icons";
 import { SuiSea, SuiWhite } from "./icons/sui";
 import { AptosBlack, AptosWhite } from "./icons/aptos";
@@ -49,15 +50,6 @@ const cryptocurrencies = [
         is_simple_icon: true,
     },
     {
-        name: "Sui (SUI)",
-        wallet:
-            "0xd95f8f8682d1f846a43f0513b48ceae0629228b31ef25bf546f364b4f549cf7f",
-        color: "#4DA2FF",
-        normal: SuiSea,
-        hover: SuiWhite,
-        is_svg_solid: true,
-    },
-    {
         name: "Bitcoin Cash (BCH)",
         icon: siBitcoincash,
         wallet: "bitcoincash:qqsxmceyep8kryje3zwv82vn9p720t9mrc8tw24fac",
@@ -68,6 +60,15 @@ const cryptocurrencies = [
         icon: siPolkadot,
         wallet: "14ETbrUvUWDzojC4wJ4wcgA3m6NGVTq6AHedT525uE1KiVBJ",
         is_simple_icon: true,
+    },
+    {
+        name: "Sui (SUI)",
+        wallet:
+            "0xd95f8f8682d1f846a43f0513b48ceae0629228b31ef25bf546f364b4f549cf7f",
+        color: "#4DA2FF",
+        normal: SuiSea,
+        hover: SuiWhite,
+        is_svg_solid: true,
     },
     {
         name: "Litecoin (LTC)",
@@ -90,6 +91,15 @@ const cryptocurrencies = [
         wallet:
             "439PXtqPt1aGrMRCjy416PYeAXT4mVsTDM8brBdC78fZhK2cNSRwLX8WTn2dR6FAhrLocck9qPLFGQefexe9j4zZTowHafu",
         is_simple_icon: true,
+    },
+    {
+        name: "Stellar (XLM)",
+        icon: siStellar,
+        wallet: "GDIMCHISXZULBM5NYKIRZQ7ZROP2MQIMQDTLWW4T4DX6HEJYWZQNCMZW",
+        is_simple_icon: true,
+        color: "#0F0F0F",
+        button_color: "#FDDA24",
+        keep_color: true,
     },
     // {
     //     name: "Firo (FIRO)",

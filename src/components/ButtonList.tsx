@@ -38,6 +38,7 @@ const ButtonContainer = (
 
     let icon_color = accent_color;
     let hover_color = accent_color;
+    let hover_text_color = background_color;
 
     if (link.is_simple_icon) {
         icon_color = "#" + link.icon.hex;
@@ -47,6 +48,14 @@ const ButtonContainer = (
     if (link.color) {
         icon_color = link.color;
         hover_color = link.color;
+    }
+
+    if (link.button_color) {
+        hover_color = link.button_color;
+    }
+
+    if (link.keep_color) {
+        hover_text_color = icon_color;
     }
 
     if (is_color_default) {
@@ -59,6 +68,7 @@ const ButtonContainer = (
             <FloatingWindow
                 link={link}
                 color={hover_color}
+                hoverTextColor={hover_text_color}
                 isButtonHovered={isHovered}
             >
             </FloatingWindow>
@@ -77,7 +87,7 @@ const ButtonContainer = (
                     "border": isHovered()
                         ? `2px ${hover_color} solid`
                         : `2px ${border_color} solid`,
-                    color: isHovered() ? background_color : text_color,
+                    color: isHovered() ? hover_text_color : text_color,
                 }}
             >
                 <Switch>
@@ -86,6 +96,7 @@ const ButtonContainer = (
                             icon={link.icon}
                             isHovered={isHovered}
                             color={icon_color}
+                            hover_color={hover_text_color}
                         />
                     </Match>
                     <Match when={link.is_material}>
@@ -125,13 +136,15 @@ const ButtonContainer = (
     );
 };
 
-const SimpleIcon = ({ icon, isHovered, color }) => {
+const SimpleIcon = (
+    { icon, isHovered, color, hover_color = background_color },
+) => {
     return (
         <svg
             class="icon"
             xmlns="http://www.w3.org/2000/svg"
             role="img"
-            fill={isHovered() ? background_color : color}
+            fill={isHovered() ? hover_color : color}
         >
             <title>{icon.title}</title>
             <path d={icon.path}></path>

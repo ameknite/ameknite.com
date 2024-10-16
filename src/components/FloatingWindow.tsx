@@ -2,7 +2,9 @@ import { createEffect, createSignal, Match, onCleanup, Switch } from "solid-js";
 import { ErrorCorrectionLevel, QRCodeSVG } from "solid-qr-code";
 import { background_color } from "../data/colors";
 
-function FloatingWindow({ link, color, isButtonHovered }) {
+function FloatingWindow(
+    { link, color, isButtonHovered, hoverTextColor = background_color },
+) {
     const [isVisible, setIsVisible] = createSignal(false);
     let floatingWindowRef;
 
@@ -42,7 +44,6 @@ function FloatingWindow({ link, color, isButtonHovered }) {
                     ref={floatingWindowRef}
                     style={{
                         "background-color": color,
-                        "border-color": background_color,
                         width: size.toString(),
                         height: size.toString(),
                     }}
@@ -50,11 +51,12 @@ function FloatingWindow({ link, color, isButtonHovered }) {
                     <div class="floating-container">
                         <SimpleIcon
                             link={link}
+                            hoverTextColor={hoverTextColor}
                         >
                         </SimpleIcon>
                         <div
                             class="floating-text"
-                            style={{ color: background_color }}
+                            style={{ color: hoverTextColor }}
                         >
                             {link.name}
                         </div>
@@ -64,14 +66,14 @@ function FloatingWindow({ link, color, isButtonHovered }) {
                         level={ErrorCorrectionLevel.LOW}
                         backgroundColor={color}
                         backgroundAlpha={1.0}
-                        foregroundColor={background_color}
+                        foregroundColor={hoverTextColor}
                         foregroundAlpha={1.0}
                         width={size}
                         height={size}
                     />
                     <div
                         class="floating-url-text"
-                        style={{ color: background_color }}
+                        style={{ color: hoverTextColor }}
                     >
                         {url}
                     </div>
@@ -83,7 +85,7 @@ function FloatingWindow({ link, color, isButtonHovered }) {
 
 export default FloatingWindow;
 
-const SimpleIcon = ({ link }) => {
+const SimpleIcon = ({ link, hoverTextColor = background_color }) => {
     const ComponentIcon = link.component_icon;
 
     return (
@@ -93,7 +95,7 @@ const SimpleIcon = ({ link }) => {
                     class="icon"
                     xmlns="http://www.w3.org/2000/svg"
                     role="img"
-                    fill={background_color}
+                    fill={hoverTextColor}
                     width="50px"
                     height="50px"
                 >
@@ -104,7 +106,7 @@ const SimpleIcon = ({ link }) => {
                 <span
                     class="material-symbols-outlined"
                     style={{
-                        color: background_color,
+                        color: hoverTextColor,
                     }}
                 >
                     {link.symbol}
@@ -113,7 +115,7 @@ const SimpleIcon = ({ link }) => {
             <Match when={link.is_svg}>
                 <span class="icon">
                     <ComponentIcon
-                        color={background_color}
+                        color={hoverTextColor}
                     >
                     </ComponentIcon>
                 </span>

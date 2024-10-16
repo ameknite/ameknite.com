@@ -25,21 +25,8 @@ const Home = () => {
       <IconList socials={all_links} />
       <Gap size="10px"></Gap>
       <ButtonListHome links={mainContainerList} />
-      {
-        /* <FloatingWindow
-        link={youtube}
-        color={"#" + youtube.icon.hex}
-      /> */
-      }
     </div>
   );
-};
-
-const youtube = {
-  name: "BlueSky",
-  icon: siBluesky,
-  url: "https://bsky.app/profile/ameknite.com",
-  is_simple_icon: true,
 };
 
 export default Home;

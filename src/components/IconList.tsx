@@ -8,6 +8,7 @@ const IconList = ({ socials }) => {
         "Bluesky",
         "Mastodon",
         "Instagram",
+        "TikTok",
         "YouTube",
     ];
     let filtered_socials = socials.filter((

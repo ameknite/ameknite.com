@@ -2,6 +2,7 @@ import {
     siBitcoin,
     siBitcoincash,
     siCardano,
+    siDash,
     siDogecoin,
     siEthereum,
     siLitecoin,
@@ -15,6 +16,8 @@ import { AptosBlack, AptosWhite } from "./icons/aptos";
 import { Firo, FiroWhite } from "./icons/firo";
 import { Particl, ParticlWhite } from "./icons/particl";
 import { Epic } from "./icons/epic";
+import { Tezos } from "./icons/tezos";
+import { Nano } from "./icons/nano";
 
 const cryptocurrencies = [
     {
@@ -101,31 +104,52 @@ const cryptocurrencies = [
         button_color: "#FDDA24",
         keep_color: true,
     },
-    // {
-    //     name: "Firo (FIRO)",
-    //     wallet:
-    //         "sm1u5v48wvj4ks6ey5g0neafqwn38xrzgcxmtwc4dmejl5l3l7rdsdgg8aqg8w5nhnwtfjl6f47frcvf9uj6n72jxw0pkmqzpjrxs67ay8heh3rth88xxrsttrsalzhhu25qtv6hzcewd9m5",
-    //     color: "#9B1C2E",
-    //     normal: Firo,
-    //     hover: FiroWhite,
-    //     is_svg_solid: true,
-    // },
-    // {
-    //     name: "Epic Cash (EPIC)",
-    //     normal: Epic,
-    //     hover: Epic,
-    //     wallet:
-    //         "esWtitYQPrbE2uWYQsUjoQkugr2FpSAaPGyKCgHvi3SwPkgTWpov@epicbox.stackwallet.com",
-    //     color: "#2d3132",
-    //     is_svg_solid: true,
-    // },
-    // {
-    //     name: "Particl (PART)",
-    //     normal: Particl,
-    //     hover: ParticlWhite,
-    //     wallet: "pw1q25uvzhx6f6cx30mzf5t5s6arx3jc554js9zt6v",
-    //     color: "#46d593",
-    //     is_svg_solid: true,
-    // },
+    {
+        name: "Tezos (XTZ)",
+        component_icon: Tezos,
+        wallet: "tz1g2EQqTJFu3bTX4DrE5ThxznwDgiLNy2fJ",
+        color: "#0F61FF",
+        is_svg: true,
+    },
+    {
+        name: "Dash (DASH)",
+        icon: siDash,
+        wallet: "XfsnTJwWFZbtxTq1Kg38V5YUtVPzGSgMBG",
+        is_simple_icon: true,
+    },
+    {
+        name: "Nano (XNO)",
+        component_icon: Nano,
+        wallet:
+            "nano_3iknhd738mwrcxznqb37swp658oe5zher9qw5ok3pwbpnoynh53q988fjefs",
+        color: "#209CE9",
+        is_svg: true,
+    },
+    {
+        name: "Firo (FIRO)",
+        wallet:
+            "sm1u5v48wvj4ks6ey5g0neafqwn38xrzgcxmtwc4dmejl5l3l7rdsdgg8aqg8w5nhnwtfjl6f47frcvf9uj6n72jxw0pkmqzpjrxs67ay8heh3rth88xxrsttrsalzhhu25qtv6hzcewd9m5",
+        color: "#9B1C2E",
+        normal: Firo,
+        hover: FiroWhite,
+        is_svg_solid: true,
+    },
+    {
+        name: "Epic Cash (EPIC)",
+        normal: Epic,
+        hover: Epic,
+        wallet:
+            "esWtitYQPrbE2uWYQsUjoQkugr2FpSAaPGyKCgHvi3SwPkgTWpov@epicbox.stackwallet.com",
+        color: "#2d3132",
+        is_svg_solid: true,
+    },
+    {
+        name: "Particl (PART)",
+        normal: Particl,
+        hover: ParticlWhite,
+        wallet: "pw1q25uvzhx6f6cx30mzf5t5s6arx3jc554js9zt6v",
+        color: "#46d593",
+        is_svg_solid: true,
+    },
 ];
 export default cryptocurrencies;

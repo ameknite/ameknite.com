@@ -96,7 +96,7 @@ const ButtonContainer = (
                             icon={link.icon}
                             isHovered={isHovered}
                             color={icon_color}
-                            hover_color={hover_text_color}
+                            hoverColor={hover_text_color}
                         />
                     </Match>
                     <Match when={link.is_material}>
@@ -120,6 +120,7 @@ const ButtonContainer = (
                             isHovered={isHovered}
                             ComponentIcon={link.component_icon}
                             color={icon_color}
+                            hoverColor={hover_text_color}
                         >
                         </SvgIcon>
                     </Match>
@@ -137,14 +138,14 @@ const ButtonContainer = (
 };
 
 const SimpleIcon = (
-    { icon, isHovered, color, hover_color = background_color },
+    { icon, isHovered, color, hoverColor = background_color },
 ) => {
     return (
         <svg
             class="icon"
             xmlns="http://www.w3.org/2000/svg"
             role="img"
-            fill={isHovered() ? hover_color : color}
+            fill={isHovered() ? hoverColor : color}
         >
             <title>{icon.title}</title>
             <path d={icon.path}></path>
@@ -165,12 +166,15 @@ const MaterialIcon = ({ isHovered, symbol, color }) => {
     );
 };
 
-const SvgIcon = ({ ComponentIcon, isHovered, color }) => {
+const SvgIcon = (
+    { ComponentIcon, isHovered, color, hoverColor = background_color },
+) => {
     return (
         <span class="icon">
             <ComponentIcon
                 color={color}
                 isHovered={isHovered}
+                hoverColor={hoverColor}
             >
             </ComponentIcon>
         </span>

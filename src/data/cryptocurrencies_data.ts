@@ -18,6 +18,7 @@ import { Particl, ParticlWhite } from "./icons/particl";
 import { Epic } from "./icons/epic";
 import { Tezos } from "./icons/tezos";
 import { Nano } from "./icons/nano";
+import { Mobilecoin } from "./icons/mobilecoin";
 
 const cryptocurrencies = [
     {
@@ -123,6 +124,15 @@ const cryptocurrencies = [
         wallet:
             "nano_3iknhd738mwrcxznqb37swp658oe5zher9qw5ok3pwbpnoynh53q988fjefs",
         color: "#209CE9",
+        is_svg: true,
+    },
+    {
+        name: "MobileCoin (MOB)",
+        component_icon: Mobilecoin,
+        wallet:
+            "6cNojQy8TSho6Qxx21LnQnbEKBg8MA4XM5XDipkrjFMhqZLeUZb7FdLHqjNJjGDVLUPpqoRrYQMdQ9APjA1C4AWmFibYHbaWbJf3CYeDU52Q7anpsnfwvsngom6Gu3gyESoPNwquv7AM12wV7mikFyYPCB8YFTeG3pZPVugm8x655UKnKgyLU9CfjTLjcDLxFaqSexKK88sXGSUMHKpNv46Zz2zLhFqWLz1BzB1HMX8ZMF",
+        color: "#000000",
+        button_color: "#8d5fff",
         is_svg: true,
     },
     {

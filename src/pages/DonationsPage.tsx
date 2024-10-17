@@ -12,6 +12,9 @@ const DonationsPage: Component = () => (
         <div class="page-title">Donate</div>
         <Gap size="10px"></Gap>
         <ButtonList links={donation_links} />
+        <em>
+            <span class="subtitle">⚠ NO REFUNDS</span>
+        </em>
     </div>
 );
 

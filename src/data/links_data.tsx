@@ -12,11 +12,13 @@ import {
     siKofi,
     siMastodon,
     siMisskey,
+    siNiconico,
     siPixelfed,
     siPixiv,
     siReddit,
     siThreads,
     siTiktok,
+    siTumblr,
     siTwitch,
     siVimeo,
     siVk,
@@ -103,6 +105,12 @@ const microblog_links = [
         url: "https://misskey.design/@ameknite",
         is_simple_icon: true,
     },
+    {
+        name: "Tumblr",
+        icon: siTumblr,
+        url: "https://www.tumblr.com/ameknite",
+        is_simple_icon: true,
+    },
 ];
 
 const image_links = [
@@ -137,6 +145,12 @@ const video_links = [
         name: "Vimeo",
         icon: siVimeo,
         url: "https://vimeo.com/ameknite",
+        is_simple_icon: true,
+    },
+    {
+        name: "Niconico",
+        icon: siNiconico,
+        url: "https://www.nicovideo.jp/user/136575634",
         is_simple_icon: true,
     },
 ];

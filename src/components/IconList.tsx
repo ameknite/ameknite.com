@@ -5,10 +5,10 @@ import { accent_color, text_color } from "../data/colors";
 const IconList = ({ socials }) => {
     const selected_socials = [
         "Bluesky",
-        "Mastodon",
-        "Pixelfed",
-        "Misskey",
+        "X",
+        "Instagram",
         "YouTube",
+        "TikTok",
     ];
     let filtered_socials = socials.filter((
         social: { name: string },

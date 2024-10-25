@@ -41,11 +41,13 @@ body {
 .description-block {
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 8px
 }
 
 .star {
     color: var(--accent-color);
+    line-height: 1;
 }
 
 .description {

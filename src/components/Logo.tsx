@@ -21,8 +21,8 @@ const Logo = () => {
         <>
             <Title text="Ame アメ" isHovered={isHovered()} />
             <Description
-                text_front="@ameknite"
-                text_back="Character Artist"
+                text_first="@ameknite"
+                text_last="Character Artist"
                 handleMouseEnter={handleMouseEnter}
                 handleMouseLeave={handleMouseLeave}
             />
@@ -39,9 +39,7 @@ const Title = (
     return (
         <a
             href="/"
-            title="home"
             rel="noopener noreferrer"
-            aria-label="home"
             class={`title ${props.isHovered ? "hovered" : ""}`}
         >
             {props.text}
@@ -51,17 +49,21 @@ const Title = (
 
 const Description = (props) => {
     return (
-        <p class="description">
-            {props.text_front}{" "}
+        <div class="description-block">
+            <span class="description left">
+                {props.text_first}
+            </span>
             <span
                 class="star"
                 onMouseEnter={props.handleMouseEnter}
                 onMouseLeave={props.handleMouseLeave}
             >
                 ✦
-            </span>{" "}
-            {props.text_back}
-        </p>
+            </span>
+            <span class="description right">
+                {props.text_last}
+            </span>
+        </div>
     );
 };
 

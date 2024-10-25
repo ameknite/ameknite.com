@@ -19,10 +19,12 @@ const IconList = ({ socials }) => {
     );
 
     return (
-        <div class="icons">
-            <For each={filtered_socials}>
-                {(social) => <SimpleLink link={social}></SimpleLink>}
-            </For>
+        <div class="icons-block">
+            <div class="icons">
+                <For each={filtered_socials}>
+                    {(social) => <SimpleLink link={social}></SimpleLink>}
+                </For>
+            </div>
             <MaterialLink
                 symbol={route_link.symbol}
                 url={route_link.route}

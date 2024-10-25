@@ -24,9 +24,9 @@ body {
 
 
 .title {
-    font-size: 70px;
+    font-size: 4.5rem;
     color: var(--text-color);
-    margin: 0;
+    /* margin-left: 41.65px; */
     line-height: 1;
     transition: color 0.5s ease-in-out, transform 0.5s ease-in-out;
     text-decoration: none;
@@ -38,15 +38,34 @@ body {
     color: var(--accent-color);
 }
 
-.description {
-    font-size: 20px;
-    color: var(--text-color);
-    line-height: 1;
-    margin: 0;
+.description-block {
+    display: flex;
+    flex-direction: row;
+    gap: 8px
 }
 
 .star {
     color: var(--accent-color);
+}
+
+.description {
+    font-size: 1.25rem;
+    color: var(--text-color);
+    line-height: 1;
+}
+
+/* .description.left {
+    margin-left: 41.65px;
+} */
+
+
+.icons-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 8px
 }
 
 .icons {
@@ -55,7 +74,8 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 1rem;
+    gap: 16px;
+    margin-left: 8px;
 }
 
 .icon {
@@ -70,14 +90,14 @@ body {
 }
 
 .material-symbols-outlined {
-    transform: scale(1.1);
+    transform: scale(1.0);
     transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
     text-decoration: none;
     z-index: 0;
 }
 
 .material-symbols-outlined:hover {
-    transform: scale(1.4);
+    transform: scale(1.2);
 }
 
 

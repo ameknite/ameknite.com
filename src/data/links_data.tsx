@@ -162,12 +162,12 @@ const stream_links = [
         url: "https://www.twitch.tv/ameknite",
         is_simple_icon: true,
     },
-    // {
-    //     name: "Kick",
-    //     icon: siKick,
-    //     url: "https://www.twitch.tv/ameknite",
-    //     is_simple_icon: true,
-    // },
+    {
+        name: "Kick",
+        icon: siKick,
+        url: "https://kick.com/ameknite",
+        is_simple_icon: true,
+    },
 ];
 
 const art_links = [

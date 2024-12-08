@@ -54,25 +54,16 @@ const cryptocurrencies = [
         is_simple_icon: true,
     },
     {
-        name: "Bitcoin Cash (BCH)",
-        icon: siBitcoincash,
-        wallet: "bitcoincash:qqsxmceyep8kryje3zwv82vn9p720t9mrc8tw24fac",
-        is_simple_icon: true,
-    },
-    {
         name: "Polkadot (DOT)",
         icon: siPolkadot,
         wallet: "14ETbrUvUWDzojC4wJ4wcgA3m6NGVTq6AHedT525uE1KiVBJ",
         is_simple_icon: true,
     },
     {
-        name: "Sui (SUI)",
-        wallet:
-            "0xd95f8f8682d1f846a43f0513b48ceae0629228b31ef25bf546f364b4f549cf7f",
-        color: "#4DA2FF",
-        normal: SuiSea,
-        hover: SuiWhite,
-        is_svg_solid: true,
+        name: "Bitcoin Cash (BCH)",
+        icon: siBitcoincash,
+        wallet: "bitcoincash:qqsxmceyep8kryje3zwv82vn9p720t9mrc8tw24fac",
+        is_simple_icon: true,
     },
     {
         name: "Litecoin (LTC)",
@@ -80,15 +71,24 @@ const cryptocurrencies = [
         wallet: "ltc1qy8x467rk33req623gkyc5uxqxuv3gpa8y658s3",
         is_simple_icon: true,
     },
-    {
-        name: "Aptos (APT)",
-        wallet:
-            "0x8d478155ea6876d8a91536b69fc4bcdfb17dea2fc6bf35527d3d4a4926561773",
-        color: "#000000",
-        normal: AptosBlack,
-        hover: AptosWhite,
-        is_svg_solid: true,
-    },
+    // {
+    //     name: "Sui (SUI)",
+    //     wallet:
+    //         "0xd95f8f8682d1f846a43f0513b48ceae0629228b31ef25bf546f364b4f549cf7f",
+    //     color: "#4DA2FF",
+    //     normal: SuiSea,
+    //     hover: SuiWhite,
+    //     is_svg_solid: true,
+    // },
+    // {
+    //     name: "Aptos (APT)",
+    //     wallet:
+    //         "0x8d478155ea6876d8a91536b69fc4bcdfb17dea2fc6bf35527d3d4a4926561773",
+    //     color: "#000000",
+    //     normal: AptosBlack,
+    //     hover: AptosWhite,
+    //     is_svg_solid: true,
+    // },
     {
         name: "Monero (XMR)",
         icon: siMonero,
@@ -96,45 +96,45 @@ const cryptocurrencies = [
             "439PXtqPt1aGrMRCjy416PYeAXT4mVsTDM8brBdC78fZhK2cNSRwLX8WTn2dR6FAhrLocck9qPLFGQefexe9j4zZTowHafu",
         is_simple_icon: true,
     },
-    {
-        name: "Stellar (XLM)",
-        icon: siStellar,
-        wallet: "GDIMCHISXZULBM5NYKIRZQ7ZROP2MQIMQDTLWW4T4DX6HEJYWZQNCMZW",
-        is_simple_icon: true,
-        color: "#0F0F0F",
-        button_color: "#FDDA24",
-        keep_color: true,
-    },
-    {
-        name: "Tezos (XTZ)",
-        component_icon: Tezos,
-        wallet: "tz1g2EQqTJFu3bTX4DrE5ThxznwDgiLNy2fJ",
-        color: "#0F61FF",
-        is_svg: true,
-    },
-    {
-        name: "Dash (DASH)",
-        icon: siDash,
-        wallet: "XfsnTJwWFZbtxTq1Kg38V5YUtVPzGSgMBG",
-        is_simple_icon: true,
-    },
-    {
-        name: "Nano (XNO)",
-        component_icon: Nano,
-        wallet:
-            "nano_3iknhd738mwrcxznqb37swp658oe5zher9qw5ok3pwbpnoynh53q988fjefs",
-        color: "#209CE9",
-        is_svg: true,
-    },
-    {
-        name: "MobileCoin (MOB)",
-        component_icon: Mobilecoin,
-        wallet:
-            "6cNojQy8TSho6Qxx21LnQnbEKBg8MA4XM5XDipkrjFMhqZLeUZb7FdLHqjNJjGDVLUPpqoRrYQMdQ9APjA1C4AWmFibYHbaWbJf3CYeDU52Q7anpsnfwvsngom6Gu3gyESoPNwquv7AM12wV7mikFyYPCB8YFTeG3pZPVugm8x655UKnKgyLU9CfjTLjcDLxFaqSexKK88sXGSUMHKpNv46Zz2zLhFqWLz1BzB1HMX8ZMF",
-        color: "#000000",
-        button_color: "#8d5fff",
-        is_svg: true,
-    },
+    // {
+    //     name: "Stellar (XLM)",
+    //     icon: siStellar,
+    //     wallet: "GDIMCHISXZULBM5NYKIRZQ7ZROP2MQIMQDTLWW4T4DX6HEJYWZQNCMZW",
+    //     is_simple_icon: true,
+    //     color: "#0F0F0F",
+    //     button_color: "#FDDA24",
+    //     keep_color: true,
+    // },
+    // {
+    //     name: "Tezos (XTZ)",
+    //     component_icon: Tezos,
+    //     wallet: "tz1g2EQqTJFu3bTX4DrE5ThxznwDgiLNy2fJ",
+    //     color: "#0F61FF",
+    //     is_svg: true,
+    // },
+    // {
+    //     name: "Dash (DASH)",
+    //     icon: siDash,
+    //     wallet: "XfsnTJwWFZbtxTq1Kg38V5YUtVPzGSgMBG",
+    //     is_simple_icon: true,
+    // },
+    // {
+    //     name: "Nano (XNO)",
+    //     component_icon: Nano,
+    //     wallet:
+    //         "nano_3iknhd738mwrcxznqb37swp658oe5zher9qw5ok3pwbpnoynh53q988fjefs",
+    //     color: "#209CE9",
+    //     is_svg: true,
+    // },
+    // {
+    //     name: "MobileCoin (MOB)",
+    //     component_icon: Mobilecoin,
+    //     wallet:
+    //         "6cNojQy8TSho6Qxx21LnQnbEKBg8MA4XM5XDipkrjFMhqZLeUZb7FdLHqjNJjGDVLUPpqoRrYQMdQ9APjA1C4AWmFibYHbaWbJf3CYeDU52Q7anpsnfwvsngom6Gu3gyESoPNwquv7AM12wV7mikFyYPCB8YFTeG3pZPVugm8x655UKnKgyLU9CfjTLjcDLxFaqSexKK88sXGSUMHKpNv46Zz2zLhFqWLz1BzB1HMX8ZMF",
+    //     color: "#000000",
+    //     button_color: "#8d5fff",
+    //     is_svg: true,
+    // },
     {
         name: "Firo (FIRO)",
         wallet:
@@ -153,13 +153,13 @@ const cryptocurrencies = [
         color: "#2d3132",
         is_svg_solid: true,
     },
-    {
-        name: "Particl (PART)",
-        normal: Particl,
-        hover: ParticlWhite,
-        wallet: "pw1q25uvzhx6f6cx30mzf5t5s6arx3jc554js9zt6v",
-        color: "#46d593",
-        is_svg_solid: true,
-    },
+    // {
+    //     name: "Particl (PART)",
+    //     normal: Particl,
+    //     hover: ParticlWhite,
+    //     wallet: "pw1q25uvzhx6f6cx30mzf5t5s6arx3jc554js9zt6v",
+    //     color: "#46d593",
+    //     is_svg_solid: true,
+    // },
 ];
 export default cryptocurrencies;

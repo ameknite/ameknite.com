@@ -25,7 +25,7 @@ const cryptocurrencies = [
         name: "Bitcoin (BTC)",
         icon: siBitcoin,
         wallet:
-            "bc1p4zjmeuc43uenwskc5tjs9fjpftvtdn5xyrjsnm3293kesuzpczss0y3nml",
+            "bc1pfecrphduhtwcux72nhv3xg6kfyrr48cqpy6nc8tf44py97m7ywyslj2p39",
         is_simple_icon: true,
     },
     {

@@ -10,6 +10,7 @@ import {
     siItchdotio,
     siKick,
     siKofi,
+    siLemmy,
     siMastodon,
     siMisskey,
     siNiconico,
@@ -61,10 +62,10 @@ const emails = [
 const stores_links = [
     {
         name: "Ko-fi",
-        component_icon: Kofi,
+        icon: siKofi,
         color: "#FF6433",
         url: "https://ko-fi.com/ameknite",
-        is_svg: true,
+        is_simple_icon: true,
     },
     {
         name: "Itch.io",
@@ -212,6 +213,13 @@ const misc_links = [
         url: "https://www.reddit.com/user/ameknite/",
         is_simple_icon: true,
     },
+    {
+        name: "Lemmy",
+        icon: siLemmy,
+        url: "https://lemmy.world/u/ameknite",
+        is_simple_icon: true,
+    },
+
 ];
 
 const code_links = [

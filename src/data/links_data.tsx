@@ -82,12 +82,12 @@ const microblog_links = [
         url: "https://x.com/ameknite",
         is_simple_icon: true,
     },
-    {
-        name: "Bluesky",
-        icon: siBluesky,
-        url: "https://bsky.app/profile/ameknite.com",
-        is_simple_icon: true,
-    },
+    // {
+    //     name: "Bluesky",
+    //     icon: siBluesky,
+    //     url: "https://bsky.app/profile/ameknite.com",
+    //     is_simple_icon: true,
+    // },
     {
         name: "Mastodon",
         icon: siMastodon,

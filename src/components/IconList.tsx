@@ -4,9 +4,9 @@ import { accent_color, text_color } from "../data/colors";
 
 const IconList = ({ socials }) => {
     const selected_socials = [
-        "Bluesky",
         "X",
         "Instagram",
+        "Twitch",
         "YouTube",
         "TikTok",
     ];

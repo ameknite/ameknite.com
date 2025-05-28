@@ -118,7 +118,7 @@ const image_links = [
     {
         name: "Instagram",
         icon: siInstagram,
-        url: "https://instagram.com/ameknite",
+        url: "https://instagram.com/ameknite0",
         is_simple_icon: true,
     },
     {
@@ -198,7 +198,7 @@ const misc_links = [
     {
         name: "Facebook",
         icon: siFacebook,
-        url: "https://www.facebook.com/amekniteA/",
+        url: "https://www.facebook.com/ameknite/",
         is_simple_icon: true,
     },
     {

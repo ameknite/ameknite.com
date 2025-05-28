@@ -94,12 +94,12 @@ const microblog_links = [
         url: "https://mastodon.social/@ameknite",
         is_simple_icon: true,
     },
-    {
-        name: "Threads",
-        icon: siThreads,
-        url: "https://www.threads.net/@ameknite",
-        is_simple_icon: true,
-    },
+    // {
+    //     name: "Threads",
+    //     icon: siThreads,
+    //     url: "https://www.threads.net/@ameknite",
+    //     is_simple_icon: true,
+    // },
     {
         name: "Misskey",
         icon: siMisskey,

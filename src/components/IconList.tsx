@@ -6,7 +6,7 @@ const IconList = ({ socials }) => {
     const selected_socials = [
         "X",
         "Instagram",
-        "Twitch",
+        "Mastodon",
         "YouTube",
         "TikTok",
     ];

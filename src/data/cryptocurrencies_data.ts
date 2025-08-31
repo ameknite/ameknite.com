@@ -37,28 +37,28 @@ const cryptocurrencies = [
     {
         name: "Solana (SOL)",
         icon: siSolana,
-        wallet: "AjWEgc8cWpjeUFRysB5rzfebPzKMeJG1yXsgGzpxG7G",
+        wallet: "2DJAqRNmCzt5An4B8yHdkKdHL36k9ErhF9iiEja7373y",
         is_simple_icon: true,
     },
-    {
-        name: "Dogecoin (DOGE)",
-        icon: siDogecoin,
-        wallet: "D8vhx1h4mZoicU7Wnfyo85XLcWt8fSSvZv",
-        is_simple_icon: true,
-    },
-    {
-        name: "Cardano (ADA)",
-        icon: siCardano,
-        wallet:
-            "addr1qxgryuy4ddq363vgx6nwypyefkeec7kf0fsrmt9grxdkv04l2n4lnr5w9eelks0tr2lhvu3ysgecf20ghtjdq7qy7qwquln32z",
-        is_simple_icon: true,
-    },
-    {
-        name: "Polkadot (DOT)",
-        icon: siPolkadot,
-        wallet: "14ETbrUvUWDzojC4wJ4wcgA3m6NGVTq6AHedT525uE1KiVBJ",
-        is_simple_icon: true,
-    },
+    // {
+    //     name: "Dogecoin (DOGE)",
+    //     icon: siDogecoin,
+    //     wallet: "D8vhx1h4mZoicU7Wnfyo85XLcWt8fSSvZv",
+    //     is_simple_icon: true,
+    // },
+    // {
+    //     name: "Cardano (ADA)",
+    //     icon: siCardano,
+    //     wallet:
+    //         "addr1qxgryuy4ddq363vgx6nwypyefkeec7kf0fsrmt9grxdkv04l2n4lnr5w9eelks0tr2lhvu3ysgecf20ghtjdq7qy7qwquln32z",
+    //     is_simple_icon: true,
+    // },
+    // {
+    //     name: "Polkadot (DOT)",
+    //     icon: siPolkadot,
+    //     wallet: "14ETbrUvUWDzojC4wJ4wcgA3m6NGVTq6AHedT525uE1KiVBJ",
+    //     is_simple_icon: true,
+    // },
     {
         name: "Bitcoin Cash (BCH)",
         icon: siBitcoincash,
@@ -135,24 +135,24 @@ const cryptocurrencies = [
     //     button_color: "#8d5fff",
     //     is_svg: true,
     // },
-    {
-        name: "Firo (FIRO)",
-        wallet:
-            "sm1u5v48wvj4ks6ey5g0neafqwn38xrzgcxmtwc4dmejl5l3l7rdsdgg8aqg8w5nhnwtfjl6f47frcvf9uj6n72jxw0pkmqzpjrxs67ay8heh3rth88xxrsttrsalzhhu25qtv6hzcewd9m5",
-        color: "#9B1C2E",
-        normal: Firo,
-        hover: FiroWhite,
-        is_svg_solid: true,
-    },
-    {
-        name: "Epic Cash (EPIC)",
-        normal: Epic,
-        hover: Epic,
-        wallet:
-            "esWtitYQPrbE2uWYQsUjoQkugr2FpSAaPGyKCgHvi3SwPkgTWpov@epicbox.stackwallet.com",
-        color: "#2d3132",
-        is_svg_solid: true,
-    },
+    // {
+    //     name: "Firo (FIRO)",
+    //     wallet:
+    //         "sm1u5v48wvj4ks6ey5g0neafqwn38xrzgcxmtwc4dmejl5l3l7rdsdgg8aqg8w5nhnwtfjl6f47frcvf9uj6n72jxw0pkmqzpjrxs67ay8heh3rth88xxrsttrsalzhhu25qtv6hzcewd9m5",
+    //     color: "#9B1C2E",
+    //     normal: Firo,
+    //     hover: FiroWhite,
+    //     is_svg_solid: true,
+    // },
+    // {
+    //     name: "Epic Cash (EPIC)",
+    //     normal: Epic,
+    //     hover: Epic,
+    //     wallet:
+    //         "esWtitYQPrbE2uWYQsUjoQkugr2FpSAaPGyKCgHvi3SwPkgTWpov@epicbox.stackwallet.com",
+    //     color: "#2d3132",
+    //     is_svg_solid: true,
+    // },
     // {
     //     name: "Particl (PART)",
     //     normal: Particl,
